@@ -370,7 +370,7 @@
     } catch (err) {
       console.error(err);
       addTurn('assistant', 'Error: ' + err.message);
-      } finally {
+    } finally {
       core.classList.remove('thinking');
       statusEl.textContent = 'Ready — click the circle and speak';
     }
