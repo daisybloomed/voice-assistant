@@ -369,8 +369,8 @@
       speak(reply);
     } catch (err) {
       console.error(err);
-      addTurn('assistant', 'Something went wrong generating a reply — see the browser console for details.');
-    } finally {
+      addTurn('assistant', 'Error: ' + err.message);
+      } finally {
       core.classList.remove('thinking');
       statusEl.textContent = 'Ready — click the circle and speak';
     }
